@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  /* Font */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-roboto: "Roboto', sans-serif";
+
+  /* Colors */
+  --clr-white: #ffffff;
+  --clr-dark: #000000;
+  --clr-black: #241400;
+  --clr-black-dark: #030102;
+  --clr-light-black: #391f00;
+  --clr-orange: #e16a00;
+  --clr-grey: #cecece;
+  --clr-grey-light: #e6e7e9;
+  --clr-main-red: #720418;
+  --clr-dark-yellow: #ff8b00;
+  --clr-light-gold: #fffaf5;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Sonrdan Elave Olunanlar......................................*/
+
+body {
+  font-family: var(--font-montserrat);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: var(--clr-light-gold);
+}
+
+.custom-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+section {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+a {
+  text-decoration: none;
+}
