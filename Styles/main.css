@@ -85,7 +85,7 @@ ul li a.check {
   display: flex;
   justify-content: center;
   align-items: start;
-  gap: 91px;
+  gap: 50px;
 }
 
 .text1 {
@@ -93,7 +93,7 @@ ul li a.check {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font-size: 18px;
+  font-size: 13px;
   color: white;
 
 }
@@ -117,23 +117,21 @@ ul li a.check {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 330px;
-
+  gap: 100px;
 }
 
 .num {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--clr-orange);
-
 }
 
 .footerBtn {
   background-color: var(--clr-light-black);
   border: 1px solid var(--clr-orange);
   color: var(--clr-orange);
-  font-size: 14px;
-  padding: 10px 15px;
+  font-size: 16px;
+  padding: 5px 10px;
 }
 
 /* section1-------------------------------------- */
@@ -170,19 +168,22 @@ ul li a.check {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 60px;
 }
-.btnsCatalog{
+
+.btnsCatalog {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 36px;
 }
 
-.section2Content{
+.section2Content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+
 }
 
 .cBtn {
@@ -197,12 +198,62 @@ ul li a.check {
   box-shadow: 1px 3px 5px 0.2px rgb(103, 101, 101);
 }
 
+.sec3Text {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sec3Num {
+  font-size: 40px;
+  font-weight: 900;
+  color: black;
+}
+
+.section3Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
+
+.sec3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 136px;
+  margin-bottom: 120px;
+}
+
+.sec4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 120px;
+}
+
+/* Home Page Mobile--------------------- */
+
+
+
+
 /* About section start.............................................. */
 .about-container {
   padding: 110px 0 250px;
   display: flex;
   align-items: center;
   gap: 40px;
+
+}
+
+.socialContainer {
+  margin-bottom: 133px;
 }
 
 .about-container h1 {
