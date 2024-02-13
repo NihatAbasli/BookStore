@@ -22,6 +22,10 @@
 
 /* Navbar style  START------------------------------------------------------- */
 
+.headerContainer {
+  height: 100px;
+}
+
 .linkContent ul {
   display: flex;
   justify-content: center;
@@ -54,7 +58,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   gap: 30px;
   margin-top: 42px;
 }
@@ -77,14 +81,14 @@ ul li a.check {
   padding: 56px 0px 10px 0px;
 }
 
-.textContent{
+.textContent {
   display: flex;
   justify-content: center;
-  align-items:start;
+  align-items: start;
   gap: 91px;
 }
 
-.text1{
+.text1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,42 +98,103 @@ ul li a.check {
 
 }
 
-.endText{
+.endText {
   font-size: 12px;
   color: white;
   text-align: center;
   padding-top: 20px;
-  
+
 }
 
-.umumicontent{
+.umumicontent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.footerFlex{
+.footerFlex {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 330px;
-  
+
 }
 
-.num{
+.num {
   font-size: 12px;
   font-weight: 700;
   color: var(--clr-orange);
 
 }
 
-.footerBtn{
+.footerBtn {
   background-color: var(--clr-light-black);
   border: 1px solid var(--clr-orange);
   color: var(--clr-orange);
   font-size: 14px;
   padding: 10px 15px;
+}
+
+/* section1-------------------------------------- */
+
+.leftText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 35%;
+}
+
+.t1 {
+  font-weight: 900;
+  font-size: 36px;
+  color: var(--clr-black);
+}
+
+.t2 {
+  font-size: 13px;
+  color: var(--clr-black);
+  margin: 20px 0px;
+}
+
+.catalogButton {
+  font-weight: 900;
+  font-size: 15px;
+  padding: 10px 24px;
+  background-color: var(--clr-dark-yellow);
+  border: none;
+  color: white;
+}
+
+.section1Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btnsCatalog{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 36px;
+}
+
+.section2Content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.cBtn {
+  width: 242px;
+  height: 76px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: var(--clr-black);
+  box-shadow: 1px 3px 5px 0.2px rgb(103, 101, 101);
 }
 
 /* About section start.............................................. */
@@ -139,6 +204,7 @@ ul li a.check {
   align-items: center;
   gap: 40px;
 }
+
 .about-container h1 {
   font-family: var(--font-montserrat);
   font-size: 36px;
@@ -152,5 +218,5 @@ ul li a.check {
   font-weight: 400;
   line-height: 35px;
 }
-/* About section end.................................................*/
 
+/* About section end.................................................*/
