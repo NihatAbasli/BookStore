@@ -12,6 +12,7 @@
   font-size: 25px;
   font-weight: 900;
   line-height: 49px;
+  color: #241400;
 }
 
 .socialContainer .mediaContent {
@@ -63,3 +64,25 @@ ul li a.check {
   color: var(--clr-orange);
   border-bottom: 1px solid var(--clr-orange);
 }
+
+/* About section start.............................................. */
+.about-container {
+  padding: 110px 0 250px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.about-container h1 {
+  font-family: var(--font-montserrat);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 71px;
+}
+
+.about-container .title {
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 35px;
+}
+/* About section end.................................................*/
