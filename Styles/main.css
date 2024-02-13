@@ -1,0 +1,20 @@
+/* Social media Container................................... */
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 0;
+}
+
+.socialContainer p {
+  font-family: var(--font-montserrat);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 49px;
+}
+
+.socialContainer .mediaContent {
+  display: flex;
+  gap: 50px;
+}
