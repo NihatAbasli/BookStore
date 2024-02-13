@@ -18,3 +18,10 @@
   display: flex;
   gap: 50px;
 }
+
+/* Navbar style  START------------------------------------------------------- */
+.linkContent{
+    display: flex;
+    
+}
+
