@@ -20,8 +20,46 @@
 }
 
 /* Navbar style  START------------------------------------------------------- */
-.linkContent{
-    display: flex;
-    
+
+.linkContent ul {
+  display: flex;
+  justify-content: center;
+  gap: 21px;
 }
 
+.linkContent ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--clr-black);
+}
+
+.joinButton {
+  width: 90px;
+  height: 38px;
+  top: 31px;
+  left: 1418px;
+  background-color: var(--clr-light-gold);
+  font-family: var(--font-montserrat);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 42px;
+}
+
+ul li a.check {
+  font-weight: 700;
+  color: var(--clr-orange);
+  border-bottom: 1px solid var(--clr-orange);
+}
