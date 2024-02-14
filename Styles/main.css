@@ -39,10 +39,7 @@
 }
 
 .joinButton {
-  width: 90px;
-  height: 38px;
-  top: 31px;
-  left: 1418px;
+  padding: 10px 15px;
   background-color: var(--clr-light-gold);
   font-family: var(--font-montserrat);
   font-size: 15px;
@@ -140,7 +137,11 @@ ul li a.check {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 35%;
+  width: 40%;
+}
+
+.rightImg {
+  width: 50%;
 }
 
 .t1 {
@@ -158,10 +159,12 @@ ul li a.check {
 .catalogButton {
   font-weight: 900;
   font-size: 15px;
-  padding: 10px 24px;
-  background-color: var(--clr-dark-yellow);
+  padding: 10px 14px;
+  width: 60%;
+  background-color: var(--clr-orange);
   border: none;
   color: white;
+  box-shadow: 2px 2px 5px 0.15px rgb(78, 76, 76);
 }
 
 .section1Content {
@@ -196,6 +199,12 @@ ul li a.check {
   background-color: white;
   color: var(--clr-black);
   box-shadow: 1px 3px 5px 0.2px rgb(103, 101, 101);
+
+}
+
+.cBtn:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.3s;
 }
 
 .sec3Text {
