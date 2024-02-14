@@ -261,7 +261,7 @@ ul li a.check {
 
 /* About section start.............................................. */
 .about-container {
-  padding: 110px 0 250px;
+  padding: 150px 0 180px;
   display: flex;
   align-items: center;
   gap: 40px;
