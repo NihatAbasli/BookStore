@@ -260,6 +260,13 @@ ul li a.check {
 /* Home Page Mobile--------------------- */
 
 /* About section start.............................................. */
+@media only screen and (max-width: 1200px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
 .about-container {
   padding: 150px 0 180px;
   display: flex;
