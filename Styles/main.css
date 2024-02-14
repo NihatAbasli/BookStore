@@ -280,3 +280,75 @@ ul li a.check {
 }
 
 /* About section end.................................................*/
+
+
+/* Book Page section start.................................................*/
+
+.bookPage{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageLeft{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.backButton{
+  width: 25%;
+  color: white;
+  background-color: var(--clr-orange);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 20px;
+  border: none;
+  box-shadow: 2px 2px 5px 0.2px rgb(92, 90, 90);
+  margin-bottom: 150px;
+  border-radius: 7px;
+}
+
+.year{
+  width: 25%;
+  background-color:#2F80ED;
+  padding: 8px 18px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px 0.2px rgb(92, 90, 90);
+  margin-bottom: 10px;
+  border-radius: 7px;
+}
+
+.bookName{
+  font-size: 35px;
+  color: var(--clr-black);
+  font-weight: 700;
+  margin: 15px 0px 0px 0px;
+}
+
+.time{
+  font-size: 16px;
+  color: var(--clr-black);
+  font-weight: 700;
+}
+
+.author{
+  font-size: 25px;
+  color: var(--clr-black);
+  font-weight: 400;
+}
+
+.title{
+  font-size: 18px;
+  color: var(--clr-black);
+  font-weight: 400;
+}
+
+
+.pageRight{
+  width: 40%;
+}
