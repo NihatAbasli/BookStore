@@ -60,6 +60,7 @@ header {
   justify-content: center;
   gap: 6px;
 }
+
 .joinButton:hover {
   transition: all 1s;
   transform: scale(1.08, 1.08);
@@ -174,6 +175,7 @@ ul li a.check {
   color: white;
   box-shadow: 2px 2px 5px 0.15px rgb(78, 76, 76);
 }
+
 .catalogButton:hover {
   transition: all 0.6s;
   transform: scale(1.06, 1.06);
@@ -370,6 +372,59 @@ ul li a.check {
 
 }
 
+
+/* Book Page section end.................................................*/
+
+
+/* Contact us Page section start.................................................*/
+
+.contactInput {
+  padding: 15px 20px;
+  width: 45%;
+  outline: 1px solid var(--clr-orange);
+  border: none;
+}
+
+.textareaContact {
+  padding: 15px 20px;
+  width: 100%;
+  outline: 1px solid var(--clr-orange);
+  border: none;
+}
+
+.contactButton {
+  width: 30%;
+  padding: 15px 60px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: var(--clr-orange);
+  border: none;
+  margin-top: 54px;
+}
+
+.inputFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contactHeader {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 71px;
+  text-align: left;
+  color: var(--clr-black);
+  margin-bottom: 15px;
+}
+
+.contactContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
 .inputCommet {
   width: 60%;
   padding: 15px 0px 15px 25px;
@@ -445,4 +500,5 @@ ul li a.check {
 
 .commentContainer {
   margin-top: 122px;
+
 }
