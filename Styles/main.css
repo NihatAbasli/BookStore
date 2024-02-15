@@ -418,12 +418,13 @@ ul li a.check {
   margin-bottom: 15px;
 }
 
-.contactContent{
+.contactContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+}
 
 .inputCommet {
   width: 60%;
@@ -501,4 +502,104 @@ ul li a.check {
 .commentContainer {
   margin-top: 122px;
 
+}
+
+/* Contact us Page section end.................................................*/
+
+/* Search Page section start.................................................*/
+
+
+
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.searchBookContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.searchLeft {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.searchTitle {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 71px;
+  text-align: left;
+  color: var(--clr-black);
+}
+
+.searchInput {
+  padding: 15px;
+  width: 90%;
+  border: none;
+  outline: 1px solid var(--clr-orange);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.searchButton {
+  border: none;
+  background-color: var(--clr-orange);
+  padding: 15px 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.searchRight {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.bookAboutContent {
+  width: 90%;
+  padding: 30px 40px;
+  background-color: white;
+  box-shadow: 0px 7px 7px 0.5px grey;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.searchBookName {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 47px;
+  text-align: left;
+  color: var(--clr-black);
+}
+
+.searchBookAuthor {
+  color: var(--clr-black);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+}
+
+.searchBookText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
 }
