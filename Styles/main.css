@@ -415,22 +415,22 @@ ul li a.check {
 
 }
 
-.textArea{
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
-color: var(--clr-black);
+.textArea {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: var(--clr-black);
 
 }
 
-.textTop{
+.textTop {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 80px;
 }
 
-.commentContainer{
+.commentContainer {
   margin-top: 122px;
 }
