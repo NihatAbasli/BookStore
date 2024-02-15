@@ -22,8 +22,17 @@
 
 /* Navbar style  START------------------------------------------------------- */
 
+header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #f5f5f5;
+  position: fixed;
+  z-index: 99;
+}
+
 .headerContainer {
-  height: 100px;
+  height: 80px;
 }
 
 .linkContent ul {
@@ -40,7 +49,7 @@
 
 .joinButton {
   padding: 10px 15px;
-  background-color: var(--clr-light-gold);
+  background: transparent;
   font-family: var(--font-montserrat);
   font-size: 15px;
   font-weight: 600;
@@ -50,6 +59,10 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+}
+.joinButton:hover {
+  transition: all 1s;
+  transform: scale(1.08, 1.08);
 }
 
 nav {
@@ -66,10 +79,7 @@ ul li a.check {
   border-bottom: 1px solid var(--clr-orange);
 }
 
-
 /* Navbar style  END------------------------------------------------------- */
-
-
 
 /* Footer Content Start--------------------------------------------------------------- */
 
@@ -92,7 +102,6 @@ ul li a.check {
   align-items: flex-start;
   font-size: 13px;
   color: white;
-
 }
 
 .endText {
@@ -100,7 +109,6 @@ ul li a.check {
   color: white;
   text-align: center;
   padding-top: 20px;
-
 }
 
 .umumicontent {
@@ -166,12 +174,16 @@ ul li a.check {
   color: white;
   box-shadow: 2px 2px 5px 0.15px rgb(78, 76, 76);
 }
+.catalogButton:hover {
+  transition: all 0.6s;
+  transform: scale(1.06, 1.06);
+}
 
 .section1Content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  padding: 230px 0 60px;
 }
 
 .btnsCatalog {
@@ -186,7 +198,6 @@ ul li a.check {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-
 }
 
 .cBtn {
@@ -199,7 +210,6 @@ ul li a.check {
   background-color: white;
   color: var(--clr-black);
   box-shadow: 1px 3px 5px 0.2px rgb(103, 101, 101);
-
 }
 
 .cBtn:hover {
@@ -249,16 +259,19 @@ ul li a.check {
 
 /* Home Page Mobile--------------------- */
 
-
-
-
 /* About section start.............................................. */
+@media only screen and (max-width: 1200px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
 .about-container {
-  padding: 110px 0 250px;
+  padding: 150px 0 180px;
   display: flex;
   align-items: center;
   gap: 40px;
-
 }
 
 .socialContainer {
@@ -280,7 +293,6 @@ ul li a.check {
 }
 
 /* About section end.................................................*/
-
 
 /* Book Page section start.................................................*/
 
