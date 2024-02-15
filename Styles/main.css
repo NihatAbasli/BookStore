@@ -324,7 +324,7 @@ ul li a.check {
 
 .year {
   width: 25%;
-  background-color: #2f80ed;
+  background-color: #2F80ED;
   padding: 8px 18px;
   color: white;
   font-weight: 700;
@@ -336,7 +336,6 @@ ul li a.check {
 }
 
 .bookName {
-
   font-size: 35px;
   color: var(--clr-black);
   font-weight: 700;
@@ -344,21 +343,18 @@ ul li a.check {
 }
 
 .time {
-
   font-size: 16px;
   color: var(--clr-black);
   font-weight: 700;
 }
 
 .author {
-
   font-size: 25px;
   color: var(--clr-black);
   font-weight: 400;
 }
 
 .title {
-
   font-size: 18px;
   color: var(--clr-black);
   font-weight: 400;
@@ -367,8 +363,86 @@ ul li a.check {
 .pageRight {
   width: 40%;
 }
-.userName{
+
+.userName {
   font-size: 16px;
   font-weight: 500;
-  
+
+}
+
+.inputCommet {
+  width: 60%;
+  padding: 15px 0px 15px 25px;
+  border: none;
+  box-shadow: 0px 0px 7px 0.5px rgb(159, 154, 154);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: 1px solid transparent;
+}
+
+.sendButton {
+  color: white;
+  background-color: var(--clr-orange);
+  font-size: 15px;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 13px 15px;
+  box-shadow: 3px 2px 8px 0.5px rgb(159, 154, 154);
+
+}
+
+.inputContent {
+  display: flex;
+}
+
+.commentText {
+  background-color: white;
+  box-shadow: 0px 0px 5px 0.5px rgb(159, 154, 154);
+  border-radius: 5px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 60.6%;
+  margin-top: 50px;
+  gap: 25px;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--clr-black);
+}
+
+.dateUser {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--clr-black);
+
+}
+
+.textArea {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: var(--clr-black);
+
+}
+
+.textTop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+}
+
+.commentContainer {
+  margin-top: 122px;
 }
