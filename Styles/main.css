@@ -603,3 +603,45 @@ ul li a.check {
   line-height: 20px;
   text-align: left;
 }
+
+.joinContent{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+}
+
+.hamburger{
+  display: none;
+}
+
+/* Responsivliklerrrrrrr */
+
+/* Home Page Responsive */
+
+@media only screen and (max-width: 600px) {
+  .hamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+  }
+  
+  .joinButton {
+    padding: 0;
+  }
+  .joinButton img{
+    width: 18px;
+  }
+  .joinText{
+    display: none;
+  }
+  .linkContent{
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  
+}
