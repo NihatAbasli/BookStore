@@ -178,14 +178,17 @@ ul li a.check {
 }
 
 .catalogButton {
-  font-weight: 900;
-  font-size: 15px;
   padding: 10px 14px;
   width: 60%;
   background-color: var(--clr-orange);
   border: none;
-  color: white;
   box-shadow: 2px 2px 5px 0.15px rgb(78, 76, 76);
+}
+
+.catalogButton a {
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
 }
 
 .catalogButton:hover {
@@ -217,13 +220,16 @@ ul li a.check {
 .cBtn {
   width: 242px;
   height: 76px;
-  font-size: 14px;
-  font-weight: 700;
   border: none;
   border-radius: 10px;
   background-color: white;
-  color: var(--clr-black);
   box-shadow: 1px 3px 5px 0.2px rgb(103, 101, 101);
+}
+
+.cBtn a {
+  color: var(--clr-black);
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .cBtn:hover {
@@ -698,7 +704,6 @@ ul li a.check {
   }
 }
 
-
 /* Contact Us Page Responsive */
 
 @media only screen and (max-width: 600px) {
@@ -719,6 +724,4 @@ ul li a.check {
     align-items: center;
     justify-content: center;
   }
-
 }
-
