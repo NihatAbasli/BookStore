@@ -676,3 +676,28 @@ ul li a.check {
 
 }
 
+/* Search Home Page;s Responsive */
+
+@media only screen and (max-width: 600px) {
+  .searchContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchTitle {
+    text-align: center;
+  }
+
+  .searchInput {
+    width: 82%;
+  }
+
+  .bookAboutContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
