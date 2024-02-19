@@ -612,6 +612,7 @@ ul li a.check {
 }
 
 .hamburger {
+  height: 30px;
   display: none;
 }
 
@@ -631,7 +632,7 @@ ul li a.check {
     padding: 0;
   }
   .joinButton img {
-    width: 18px;
+    width: 25px;
   }
   .joinText {
     display: none;
@@ -640,9 +641,54 @@ ul li a.check {
     display: none;
   }
 
+  .section1Content {
+    padding-top: 180px;
+    flex-direction: column;
+  }
+  .catalogButton {
+    width: 80%;
+  }
+  .leftText {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .rightImg {
+    width: 100%;
+    padding-top: 30px;
+  }
+  .sec3 {
+    justify-content: center;
+  }
+
+  .section3Content {
+    width: 60%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .sec3Text {
+    width: 100%;
+    justify-content: start;
+  }
+
+  .sec3Num {
+    font-size: 50px;
+  }
+
+  .sec4 .text {
+    text-align: center;
+  }
+
   /* Footer....................................... */
 
   .textContent {
     display: none;
+  }
+
+  .footerLogo {
+    width: 100%git;
+    display: flex;
+    justify-content: center;
   }
 }
