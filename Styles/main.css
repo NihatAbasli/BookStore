@@ -90,19 +90,24 @@ ul li a.check {
 }
 
 .textContent {
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: start;
-  gap: 50px;
 }
 
 .text1 {
+  width: 22%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   font-size: 13px;
   color: white;
+}
+
+.footerContact {
+  width: 22%;
 }
 
 .endText {
@@ -113,17 +118,24 @@ ul li a.check {
 }
 
 .umumicontent {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
+}
+
+.footerLogo {
+  width: 30%;
 }
 
 .footerFlex {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  padding: 0;
 }
 
 .num {
@@ -220,6 +232,7 @@ ul li a.check {
 }
 
 .sec3Text {
+  width: 25%;
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -234,10 +247,10 @@ ul li a.check {
 }
 
 .section3Content {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 45px;
 }
 
 .sec3 {
@@ -326,7 +339,7 @@ ul li a.check {
 
 .year {
   width: 25%;
-  background-color: #2F80ED;
+  background-color: #2f80ed;
   padding: 8px 18px;
   color: white;
   font-weight: 700;
@@ -369,12 +382,9 @@ ul li a.check {
 .userName {
   font-size: 16px;
   font-weight: 500;
-
 }
 
-
 /* Book Page section end.................................................*/
-
 
 /* Contact us Page section start.................................................*/
 
@@ -423,7 +433,6 @@ ul li a.check {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .inputCommet {
@@ -445,7 +454,6 @@ ul li a.check {
   border-top-right-radius: 5px;
   padding: 13px 15px;
   box-shadow: 3px 2px 8px 0.5px rgb(159, 154, 154);
-
 }
 
 .inputContent {
@@ -480,7 +488,6 @@ ul li a.check {
   letter-spacing: 0px;
   text-align: left;
   color: var(--clr-black);
-
 }
 
 .textArea {
@@ -489,7 +496,6 @@ ul li a.check {
   line-height: 24px;
   text-align: left;
   color: var(--clr-black);
-
 }
 
 .textTop {
@@ -501,14 +507,11 @@ ul li a.check {
 
 .commentContainer {
   margin-top: 122px;
-
 }
 
 /* Contact us Page section end.................................................*/
 
 /* Search Page section start.................................................*/
-
-
 
 .searchContainer {
   display: flex;
@@ -528,7 +531,6 @@ ul li a.check {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
 }
 
 .searchTitle {
@@ -578,7 +580,6 @@ ul li a.check {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-
 }
 
 .searchBookName {
@@ -604,14 +605,13 @@ ul li a.check {
   text-align: left;
 }
 
-.joinContent{
+.joinContent {
   display: flex;
   gap: 15px;
   align-items: center;
-
 }
 
-.hamburger{
+.hamburger {
   display: none;
 }
 
@@ -620,28 +620,29 @@ ul li a.check {
 /* Home Page Responsive */
 
 @media only screen and (max-width: 600px) {
-  .hamburger{
+  .hamburger {
     display: flex;
     justify-content: center;
     align-items: center;
     display: block;
   }
-  
+
   .joinButton {
     padding: 0;
   }
-  .joinButton img{
+  .joinButton img {
     width: 18px;
   }
-  .joinText{
+  .joinText {
     display: none;
   }
-  .linkContent{
+  .linkContent {
     display: none;
   }
 
-}
+  /* Footer....................................... */
 
-@media only screen and (max-width: 600px) {
-  
+  .textContent {
+    display: none;
+  }
 }
