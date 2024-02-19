@@ -707,8 +707,15 @@ ul li a.check {
 /* Contact Us Page Responsive */
 
 @media only screen and (max-width: 600px) {
+  .contactInput {
+    width: 80%;
+  }
   .textareaContact {
-    width: 45%;
+    width: 80%;
+  }
+
+  .contactButton {
+    width: 90%;
   }
 
   .contactFlex {
@@ -725,4 +732,3 @@ ul li a.check {
     justify-content: center;
   }
 }
-
