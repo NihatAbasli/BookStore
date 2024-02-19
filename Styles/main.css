@@ -403,7 +403,6 @@ ul li a.check {
 }
 
 .contactButton {
-  width: 30%;
   padding: 15px 60px;
   color: white;
   font-weight: 500;
@@ -415,6 +414,9 @@ ul li a.check {
 
 .inputFlex {
   display: flex;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -631,12 +633,15 @@ ul li a.check {
   .joinButton {
     padding: 0;
   }
+
   .joinButton img {
     width: 25px;
   }
+
   .joinText {
     display: none;
   }
+
   .linkContent {
     display: none;
   }
@@ -692,3 +697,28 @@ ul li a.check {
     justify-content: center;
   }
 }
+
+
+/* Contact Us Page Responsive */
+
+@media only screen and (max-width: 600px) {
+  .textareaContact {
+    width: 45%;
+  }
+
+  .contactFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inputFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
