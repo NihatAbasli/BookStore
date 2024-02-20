@@ -656,18 +656,22 @@ ul li a.check {
     padding-top: 180px;
     flex-direction: column;
   }
+
   .catalogButton {
     width: 80%;
   }
+
   .leftText {
     width: 100%;
     align-items: center;
     text-align: center;
   }
+
   .rightImg {
     width: 100%;
     padding-top: 30px;
   }
+
   .sec3 {
     justify-content: center;
   }
@@ -691,6 +695,25 @@ ul li a.check {
     text-align: center;
   }
 
+
+  .about-container .right {
+    width: 90%;
+  }
+
+  .about-container .right img {
+    width: 100%;
+  }
+
+  .contactHeader {
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 26px;
+  }
+
+  .contactButton {
+    margin-top: 30px;
+  }
+
   /* Footer....................................... */
 
   .textContent {
@@ -710,6 +733,7 @@ ul li a.check {
   .contactInput {
     width: 80%;
   }
+
   .textareaContact {
     width: 80%;
   }
@@ -731,4 +755,34 @@ ul li a.check {
     align-items: center;
     justify-content: center;
   }
+
+  .bookPage {
+    flex-direction: column-reverse;
+  }
+
+  .pageLeft {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pageRight {
+    width: 100%;
+  }
+
+  .backButton {
+    margin: 180px 0 60px;
+  }
+
+  .bookPage {
+    padding: 0px 0px 10px !important;
+  }
+
+  .commentText {
+    width: 80%;
+  }
+
+  .inputContent {
+    justify-content: center;
+  }
+
 }
