@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../Styles/reset.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="loginSection">
+            <div class="adminLogo">
+                <img src="../Assets/Icon/white-logo.svg" alt="logo">
+            </div>
+            <div class="loginContainer">
+                <div class="loginTitle">Welcome Admin</div>
+                <input type="text" class="loginInput" placeholder="Username">
+                <input type="text" class="loginInput" placeholder="Password">
+                <button class="loginJoinBtn">Join</button>
+            </div>
+        </section>
+
+        <section class="adminPage">
+            <div class="adminLeft">
+                <div class="adminImgContent">
+                    <img src="../Assets/Icon/white-logo.svg" alt="logo" width="75%">
+                    <img src="../Assets/Icon/cross.svg" alt="x" style="display: none;">
+                </div>
+                <div class="sidebar">
+                    <ul>
+                        <li><img src="../Assets/Icon/onlyBook.svg" alt=""><a href="#">Home</a></li>
+                        <li><img src="../Assets/Icon/onlyBook.svg" alt=""><a href="#">Books</a></li>
+                        <li><img src="../Assets/Icon/onlyBook.svg" alt=""><a href="#">About</a></li>
+                        <li><img src="../Assets/Icon/onlyBook.svg" alt=""><a href="#">Join Us</a></li>
+                        <li><img src="../Assets/Icon/onlyBook.svg" alt=""><a href="#">Contact</a></li>
+                        <li><img src="../Assets/Icon/onlyBook.svg" alt=""><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="adminRight">
+                <div class="buttonContent">
+                    <button><img src="../Assets/Icon/profile.svg" alt=""><span>Admin</span></button>
+                    <img class="adminHamburger" src="../Assets/Icon/hamburger.svg" alt="">
+                </div>
+
+                <div class="rightContainer">
+                    <div class="searchContainer">
+                        <h1 class="addText">Add book</h1>
+
+                        <h4 class="searchBookTitle">Search book</h4>
+                        <div class="buttonInputContent">
+                            <input type="text" class="searchInput" placeholder="Enter book name">
+                            <button><img src="../Assets/Icon/search.svg" alt=""></button>
+                        </div>
+                        <div class="historyContent">
+                            <ul>
+                                <li>
+                                    <img src="../Assets/Icon/clock.svg" alt="">
+                                    <p>Dan Brown Davic</p>
+                                </li>
+                                <li>
+                                    <img src="../Assets/Icon/clock.svg" alt="">
+                                    <p>Dan Brown Davic</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Book Form Part---------------------------------------------------------------------->
+
+                    <div class="bookFormSection">
+                        <div class="formTitle">Book form</div>
+                        <form>
+                            <label for="">Book Name</label>
+                            <input type="text" placeholder="Book name">
+                            <label for="">Author Name</label>
+                            <input type="text" placeholder="Author name">
+                            <label for="">Book Image Url</label>
+                            <input type="text" placeholder="Book Image Url">
+                            <label for="">Description</label>
+                            <textarea cols="50" rows="10" placeholder="Description"></textarea>
+                            <label for="">Book Type</label>
+                            <input type="text" placeholder="Book Type">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+</body>
+
+</html>

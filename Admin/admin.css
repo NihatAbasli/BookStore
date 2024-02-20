@@ -1,0 +1,192 @@
+body {
+    background-color: var(--clr-main-red);
+}
+
+/* AdminPanel ilk sehife start */
+.loginSection {
+    display: none;
+}
+
+.loginContainer {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    padding: 60px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.loginTitle {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+    color: var(--clr-black-dark);
+}
+
+.loginInput {
+    border: none;
+    outline: 1px solid var(--clr-main-red);
+    padding: 10px 15px;
+    width: 80%;
+}
+
+.loginJoinBtn {
+    background-color: var(--clr-orange);
+    border: none;
+    font-size: 18px;
+    width: 86%;
+    padding: 15px 0px;
+    color: white;
+    font-weight: 700;
+}
+
+.adminLogo {
+    padding: 30px 0px 0px 20px;
+}
+
+/* AdminPanel ilk sehife end */
+
+/* AdminPage start */
+
+.adminPage {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.adminLeft {
+    width: 25%;
+    height: 100vh;
+    background-color: var(--clr-main-red);
+    padding: 30px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.adminImgContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.adminRight {
+    width: 75%;
+    height: 100vh;
+    padding: 0px 30px;
+    background-color: var(--clr-light-gold);
+}
+
+.buttonContent {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.adminHamburger {
+    display: none;
+}
+
+.buttonContent button {
+    background-color: transparent;
+    padding: 10px 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttonContent button span {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.addText {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 59px;
+    text-align: left;
+}
+
+.searchBookTitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: left;
+}
+
+.searchInput {
+    width: 40%;
+    padding: 15px 10px;
+    border: none;
+    outline: 1px solid var(--clr-orange);
+    border-radius: 20px;
+}
+
+.searchContainer button {
+    background-color: var(--clr-dark-yellow);
+    border-radius: 25px;
+    border: none;
+    padding: 10px 30px;
+}
+
+.searchInput::placeholder{
+    padding: 10px;
+}
+
+.buttonInputContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.historyContent {
+    background-color: var(--clr-grey);
+    border-radius: 20px;
+    width: 40%;
+    padding: 11px;
+    height: 60px;
+    overflow-y: auto;
+}
+
+.historyContent ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.historyContent ul li p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+}
+
