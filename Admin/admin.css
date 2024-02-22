@@ -1,6 +1,12 @@
+html {
+    height: 100%;
+}
+
 body {
     background-color: var(--clr-main-red);
+    min-height: 100%;
 }
+
 
 /* AdminPanel ilk sehife start */
 .loginSection {
@@ -98,6 +104,7 @@ body {
 
 .adminRight {
     width: 75%;
+    height: 100%;
     /* height: 100vh; */
     padding: 0px 30px;
     background-color: var(--clr-light-gold);
