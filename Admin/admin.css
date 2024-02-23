@@ -385,7 +385,9 @@ td {
   .buttonContent {
     justify-content: space-between;
   }
-
+  .JoinUsContainer {
+    width: 90%;
+  }
   .contactTableContainer {
     width: 90%;
   }
@@ -425,6 +427,6 @@ td {
   }
 
   .buttonContent {
-    padding: 10px;
+    width: 86%;
   }
 }
