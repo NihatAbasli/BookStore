@@ -624,6 +624,105 @@ ul li a.check {
   display: none;
 }
 
+/* Catalog Page Start..................................*/
+.catalog-container {
+  padding: 140px 0;
+}
+
+.book-list {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-list span {
+  font-family: var(--font-montserrat);
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 49px;
+  color: #241400
+}
+
+.book-type {
+  width: 50%;
+  overflow-x: auto;
+  white-space: nowrap;
+  height: 60px;
+}
+
+.book-type ul {
+  display: flex;
+  gap: 20px;
+}
+
+.book-type ul a {
+  font-family: var(--font-montserrat);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #241400;
+}
+
+.book-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 194px;
+  padding: 30px;
+  background-color: #ffff;
+  box-shadow: 0px 4px 15px 0px #00000040;
+}
+
+.book-about img {
+  width: 100%;
+}
+
+.book-about .name {
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  font-weight: 700;
+  color: #241400;
+}
+
+.book-about .author {
+  font-family: var(--font-montserrat);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.book-about button {
+  width: 100%;
+  padding: 5px;
+  box-shadow: 0px 3px 8px 0px #E16A0030;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--clr-orange);
+}
+
+.book-about button a {
+  font-family: var(--font-montserrat);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #ffff;
+
+}
+
+/* Swiper... */
+.swiper-slide {
+  width: 300px !important;
+}
+
+
+/* Catalog Page End....................................*/
+
+
+
+
 /* Responsivliklerrrrrrr */
 
 /* Home Page Responsive */
