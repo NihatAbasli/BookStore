@@ -1,62 +1,59 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background-color: var(--clr-main-red);
-    min-height: 100%;
+  background-color: var(--clr-main-red);
+  min-height: 100%;
 }
-
 
 /* AdminPanel ilk sehife start */
 .loginSection {
-    display: none;
+  display: none;
 }
 
 .loginContainer {
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 35%;
-    padding: 60px 20px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  padding: 60px 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .loginTitle {
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 54px;
-    text-align: center;
-    color: var(--clr-black-dark);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+  color: var(--clr-black-dark);
 }
 
 .loginInput {
-    border: none;
-    outline: 1px solid var(--clr-main-red);
-    padding: 10px 15px;
-    width: 80%;
+  border: none;
+  outline: 1px solid var(--clr-main-red);
+  padding: 10px 15px;
+  width: 80%;
 }
 
 .loginJoinBtn {
-    background-color: var(--clr-orange);
-    border: none;
-    font-size: 18px;
-    width: 86%;
-    padding: 15px 0px;
-    color: white;
-    font-weight: 700;
+  background-color: var(--clr-orange);
+  border: none;
+  font-size: 18px;
+  width: 86%;
+  padding: 15px 0px;
+  color: white;
+  font-weight: 700;
 }
 
 .adminLogo {
-    padding: 30px 0px 0px 20px;
+  padding: 30px 0px 0px 20px;
 }
 
 /* AdminPanel ilk sehife end */
@@ -64,316 +61,370 @@ body {
 /* AdminPage start */
 
 .adminPage {
-    display: flex;
-    margin-bottom: 50px;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .adminLeft {
-    width: 25%;
-    height: 100vh;
-    background-color: var(--clr-main-red);
-    padding: 30px 20px;
+  width: 25%;
+  height: 100vh;
+  background-color: var(--clr-main-red);
+  padding: 30px 20px;
 }
-.adminLeftCross{
-    display: none;
+.adminLeftCross {
+  display: none;
 }
 
 .sidebar ul li a {
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .sidebar ul {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
 }
 
 .sidebar ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .adminImgContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
 }
 
 .adminRight {
-    width: 75%;
-    height: 100%;
-    /* height: 100vh; */
-    padding: 0px 30px;
-    background-color: var(--clr-light-gold);
+  width: 75%;
+  height: 100%;
+  /* height: 100vh; */
+  padding: 0px 30px;
+  background-color: var(--clr-light-gold);
 }
 
 .buttonContent {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
 }
 
-.rightlogoRed{
-    display: none;
+.rightlogoRed {
+  display: none;
 }
 
 .adminHamburger {
-    display: none;
+  display: none;
 }
 
 .buttonContent button {
-    background-color: transparent;
-    padding: 10px 15px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .buttonContent button span {
-    font-weight: 500;
-    font-size: 15px;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .addText {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 59px;
-    text-align: left;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 59px;
+  text-align: left;
 }
 
 .searchBookTitle {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 35px;
-    text-align: left;
-    color: #333333;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: left;
+  color: #333333;
 }
 
 .searchInput {
-    width: 40%;
-    padding: 15px 10px;
-    border: none;
-    outline: 1px solid var(--clr-orange);
-    border-radius: 20px;
+  width: 40%;
+  padding: 15px 10px;
+  border: none;
+  outline: 1px solid var(--clr-orange);
+  border-radius: 20px;
 }
 
 .searchContainer button {
-    background-color: var(--clr-dark-yellow);
-    border-radius: 25px;
-    border: none;
-    padding: 10px 30px;
+  background-color: var(--clr-dark-yellow);
+  border-radius: 25px;
+  border: none;
+  padding: 10px 30px;
 }
 
 .searchInput::placeholder {
-    padding: 10px;
+  padding: 10px;
 }
 
 .buttonInputContent {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .historyContent {
-    background-color: #F1F0F0;
-    border-radius: 20px;
-    width: 40%;
-    padding: 11px;
-    height: 60px;
-    overflow-y: auto;
+  background-color: #f1f0f0;
+  border-radius: 20px;
+  width: 40%;
+  padding: 11px;
+  height: 60px;
+  overflow-y: auto;
 }
 
 .historyContent ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .historyContent ul li p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 25px;
-    text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
 }
 
 .formTitle {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 35px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: left;
 }
 
 label {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 19px;
-    text-align: left;
-    color: var(--clr-black-dark);
-
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: left;
+  color: var(--clr-black-dark);
 }
 
 .formInput {
-    padding: 10px 15px;
-    border: none;
-    outline: 1px solid var(--clr-orange);
-    width: 80%;
-    border-radius: 10px;
-
+  padding: 10px 15px;
+  border: none;
+  outline: 1px solid var(--clr-orange);
+  width: 80%;
+  border-radius: 10px;
 }
 
 .formTextarea {
-    padding: 10px 15px;
-    border: none;
-    outline: 1px solid var(--clr-orange);
-    width: 80%;
-    border-radius: 10px;
-
+  padding: 10px 15px;
+  border: none;
+  outline: 1px solid var(--clr-orange);
+  width: 80%;
+  border-radius: 10px;
 }
 
 .formAddBtn {
-    background-color: var(--clr-orange);
-    border: none;
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
-    padding: 10px 15px;
-    width: 82.45%;
-    border-radius: 10px;
+  background-color: var(--clr-orange);
+  border: none;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  padding: 10px 15px;
+  width: 82.45%;
+  border-radius: 10px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 20px 30px;
 }
 
 .bookFormSection {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .aboutInfoAdd {
-    background-color: var(--clr-orange);
-    border: none;
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
-    padding: 10px 15px;
-    width: 82.45%;
-    border-radius: 10px;
+  background-color: var(--clr-orange);
+  border: none;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  padding: 10px 15px;
+  width: 82.45%;
+  border-radius: 10px;
 }
 
 .joinUsTitle {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 59px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #333333;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 59px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #333333;
 }
 
 .bookstableTitle {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 59px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #333333;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 59px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #333333;
 }
 
 table {
-    width: 50%;
-    text-align: center;
-    margin-bottom: 50px;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 thead {
-    background-color: var(--clr-main-red);
+  background-color: var(--clr-main-red);
 }
 
 tr {
-    border-bottom: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 th {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: 0.01em;
-    color: var(--clr-black-dark);
-    padding: 15px;
-    color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: var(--clr-black-dark);
+  padding: 15px;
+  color: white;
 }
 
 td {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.01em;
-    color: var(--clr-black-dark);
-    padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: var(--clr-black-dark);
+  padding: 15px;
 }
 
 .imgMiddle {
-    vertical-align: middle;
-    margin-right: 10px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .booksAboutTable {
-    width: 90%;
+  width: 90%;
 }
 
 .contactAboutTable {
-    width: 90%;
+  width: 90%;
 }
 
 .contacttableTitle {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 59px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #333333;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 59px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #333333;
+}
+/* Scroll Table...................................... */
+
+.joinUsTable {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.booksTable {
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
+.contactTable {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Scroll Table...................................... */
+
 .aboutStoreTitle {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 35px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: left;
 }
 
 /* Admin Page Responsive----------------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
-    .adminLeft{
-        display: none;
-    }
-    .adminRight{
-        width: 100%;
-    }
-    .adminHamburger{
-        display: block;
-    }
-    .buttonContent button{
-        display: none;
-    }
-    .rightlogoRed{
-        display: block;
-    }
-    .buttonContent{
-        justify-content: space-between;
-    }
+  .adminLeft {
+    display: none;
+  }
+  .adminRight {
+    width: 100%;
+  }
+  .adminHamburger {
+    display: block;
+  }
+  .buttonContent button {
+    display: none;
+  }
+  .rightlogoRed {
+    display: block;
+  }
+  .buttonContent {
+    justify-content: space-between;
+  }
 
+  .contactTableContainer {
+    width: 90%;
+  }
+  .booksTableContainer {
+    width: 90%;
+  }
 
+  .searchInput {
+    width: 70%;
+  }
+  .historyContent {
+    width: 70%;
+  }
+
+  form {
+    padding: 20px 0;
+  }
+
+  .bookFormSection {
+    padding-top: 40px;
+  }
+  .formInput {
+    width: 85%;
+  }
+
+  .formTextarea {
+    width: 85%;
+  }
+  .adminRight {
+    padding: 0px 0px 0px 10px;
+  }
+  .formAddBtn {
+    width: 92%;
+  }
+  .aboutInfoAdd {
+    width: 92%;
+  }
+
+  .buttonContent {
+    padding: 10px;
+  }
 }
