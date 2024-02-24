@@ -1,15 +1,14 @@
 let hamburgerIcon = document.querySelector("#hamburgerIcon");
-let adminLeftContent = document.querySelector("#adminLeftContent");
-let adminRightContent = document.querySelector("#adminRightContent");
-let adminLeftCross = document.querySelector(".adminLeftCross");
-let responsiveSidebar = document.querySelector("#responsiveSidebar");
-
+let close = document.querySelector(".adminLeftCross");
+let Sidebar = document.querySelector(".responsiveSidebar");
+let bg1 = document.querySelector(".bg1");
 
 hamburgerIcon.addEventListener("click", function () {
-    responsiveSidebar.classList.add("active");
-    console.log("dd");
-
+  Sidebar.classList.add("active");
+  bg1.classList.add("active");
 });
 
-
-
+close.addEventListener("click", () => {
+  Sidebar.classList.remove("active");
+  bg1.classList.remove("active");
+});
