@@ -903,10 +903,82 @@ ul li a.check {
     width: 82%;
   }
 
-  .bookAboutContent{
+  .bookAboutContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
   }
 }
+
+/* Join Us Modal------------------------------------ */
+
+body {
+  position: relative;
+}
+
+.joinModal {
+  width: 30%;
+  padding: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  z-index: 101;
+  position: absolute;
+  /* top: 15%;
+  left: 50%; */
+  transform: translate(-100%, -100%);
+
+}
+
+.joinModal.exit {
+  top: 0%;
+  left: 18%;
+  transform: translate(50%, 50%);
+  transition: 1s;
+}
+
+.joinModalTitle {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+  color: var(--clr-black);
+}
+
+.joinModal input {
+  width: 90%;
+  padding: 20px;
+  border: none;
+  outline: 1px solid var(--clr-orange);
+}
+
+.joinModalBtn {
+  width: 100%;
+  background-color: var(--clr-orange);
+  border: none;
+  padding: 20px;
+  font-weight: 600;
+  color: white;
+
+}
+
+.bgDark {
+  width: 100%;
+  top: -100;
+  bottom: 0;
+  left: 0;
+  background: #00000090;
+  position: absolute;
+  z-index: 100;
+
+}
+
+.bgDark.show {
+  top: 0;
+  transition: 1s;
+}
+
