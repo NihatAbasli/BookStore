@@ -5,6 +5,7 @@ html {
 body {
   background-color: var(--clr-main-red);
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 /* AdminPanel ilk sehife start */
@@ -65,12 +66,12 @@ body {
     display: block;
   }
 }
-body{
+body {
   position: relative;
 }
 .responsiveSidebar {
   width: 80%;
-  
+
   padding: 10px;
   position: absolute;
   z-index: 2;
@@ -108,7 +109,6 @@ body{
   background-color: var(--clr-main-red);
   padding: 30px 20px;
 }
-
 
 .sidebar ul li a {
   color: white;
@@ -480,4 +480,3 @@ td {
     width: 86%;
   }
 }
-
