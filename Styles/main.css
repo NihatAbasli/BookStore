@@ -641,7 +641,7 @@ ul li a.check {
   font-size: 25px;
   font-weight: 900;
   line-height: 49px;
-  color: #241400
+  color: #241400;
 }
 
 .book-type {
@@ -697,7 +697,7 @@ ul li a.check {
 .book-about button {
   width: 100%;
   padding: 5px;
-  box-shadow: 0px 3px 8px 0px #E16A0030;
+  box-shadow: 0px 3px 8px 0px #e16a0030;
   border: none;
   border-radius: 3px;
   background-color: var(--clr-orange);
@@ -709,7 +709,6 @@ ul li a.check {
   font-weight: 900;
   line-height: 24px;
   color: #ffff;
-
 }
 
 /* Swiper... */
@@ -717,11 +716,7 @@ ul li a.check {
   width: 300px !important;
 }
 
-
 /* Catalog Page End....................................*/
-
-
-
 
 /* Responsivliklerrrrrrr */
 
@@ -793,7 +788,6 @@ ul li a.check {
   .sec4 .text {
     text-align: center;
   }
-
 
   .about-container .right {
     width: 90%;
@@ -917,6 +911,13 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+  .joinModal.exit {
+    width: 65%;
+    transform: translate(-7%, 30%) !important;
+  }
+}
+
 .joinModal {
   width: 30%;
   padding: 30px;
@@ -931,7 +932,6 @@ body {
   /* top: 15%;
   left: 50%; */
   transform: translate(-100%, -100%);
-
 }
 
 .joinModal.exit {
@@ -963,7 +963,6 @@ body {
   padding: 20px;
   font-weight: 600;
   color: white;
-
 }
 
 .bgDark {
@@ -974,7 +973,6 @@ body {
   background: #00000090;
   position: absolute;
   z-index: 100;
-
 }
 
 .bgDark.show {
@@ -983,23 +981,28 @@ body {
 }
 
 .linkContentModal {
-  width: 100%;
-  background: #241400E8;
+  background: #241400e8;
   display: flex;
   flex-direction: column;
   align-items: end;
   padding: 60px 20px;
   position: absolute;
-  top: 0;
   left: -100%;
   bottom: 0;
+  top: 0;
   z-index: 103;
-  transition: 0.5s;
+  transition: 1s;
+}
+.homeModalCross {
+  width: 20px;
 }
 
 .linkContentModal.showModalHome {
+  width: 91%;
+  transition: 1s;
+  top: 0;
   left: 0%;
-
+  bottom: 0%;
 }
 
 .linkContentModal ul {
@@ -1009,7 +1012,6 @@ body {
   align-items: flex-end;
   margin-top: 30px;
   gap: 15px;
-
 }
 
 .linkContentModal a {
@@ -1017,4 +1019,3 @@ body {
   color: white;
   font-weight: 500;
 }
-
