@@ -982,3 +982,40 @@ body {
   transition: 1s;
 }
 
+.linkContentModal {
+  width: 100%;
+  background: #241400E8;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 60px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 103;
+  transform: translate(-100%, -100%);
+  transition: 0.5s;
+}
+
+.linkContentModal.showModalHome {
+  transform: translate(0%, 0%);
+
+}
+
+.linkContentModal ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px;
+  gap: 15px;
+
+}
+
+.linkContentModal a {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}
+
