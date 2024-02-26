@@ -723,6 +723,14 @@ ul li a.check {
 /* Home Page Responsive */
 
 @media only screen and (max-width: 600px) {
+  .searchLeft {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .searchInput {
+    width: 92% !important;
+  }
   .hamburger {
     display: flex;
     justify-content: center;
