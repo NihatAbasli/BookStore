@@ -21,40 +21,61 @@ const db = getDatabase(app);
 
 let adminSearchInput = document.querySelector("#adminSearchInput");
 let adminSearchBtn = document.querySelector("#adminSearchBtn");
+let history = document.querySelector("#history");
+
+// BookForm
+const nameInput = document.querySelector("#nameInput");
+const authorInput = document.querySelector("#authorInput");
+const urlInput = document.querySelector("#urlInput");
+const descInput = document.querySelector("#descInput");
+const typeInput = document.querySelector("#typeInput");
+
+//bu funksuiya axtaris bolmesine aiddir
+function getSuggestion() {
+
+    const searchValue = adminSearchInput.value;
+    const myPromise = fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchValue}`);
+    myPromise.then((response) => {
+        return response.json();
+    }).then((data) => {
+        console.log(data.items);
+
+        data.items.forEach((item, index) => {
+            const bookTitle = item.volumeInfo.title;
+            // console.log(bookTitle);
+            let suggestionItem = `<li class="suggestEl">
+                <img src="../Assets/Icon/clock.svg" alt="">
+                <p>${bookTitle}</p>
+            </li>`
+            history.innerHTML += suggestionItem;
 
 
-adminSearchBtn.addEventListener("click", function () {
-    const searchInputValue = adminSearchInput.value; //inputa yazdigimiz deyeri tutduq
+            document.querySelectorAll("#history").forEach((el, index) => {
+                el.addEventListener("click", () => {
+                console.log(salam);
+            })
+            });
 
 
-    const myPromise = fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInputValue}`);
-
-    myPromise.then((res) => {
-        const dataPromise = res.json();
-        return dataPromise;
     })
-        .then((data) => {
-            renderBooks(data);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+})
+        .catch ((err) => {
+    console.log(err);
+})
 
-});
 
-function renderBooks(bookData) {
-    console.log("bookData--", bookData);
-    const arrData = Object.entries(bookData);
-    const a = arrData[2];
-    const b = a[1];
-    const c = b[0];
-    const cArr = Object.entries(c);
-    console.log(cArr);
-    const newArr = cArr.map((item) => {
-        return item.title;
-    }).join("");
-    console.log(newArr);
 }
+
+
+adminSearchInput.addEventListener("input", function () {
+    getSuggestion();
+})
+
+
+
+
+
+
 
 
 

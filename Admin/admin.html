@@ -81,16 +81,17 @@
                             <button id="adminSearchBtn"><img src="../Assets/Icon/search.svg" alt=""></button>
                         </div>
                         <div class="historyContent">
-                            <ul>
-                                <li>
+                            <ul id="history">
+
+                                <!-- <li class="suggestEl">
                                     <img src="../Assets/Icon/clock.svg" alt="">
                                     <p>Dan Brown Davic</p>
                                 </li>
                                 <li>
                                     <img src="../Assets/Icon/clock.svg" alt="">
                                     <p>Dan Brown Davic</p>
-                                </li>
-                            </ul>
+                                </li> -->
+                            </ul> 
                         </div>
                     </div>
 
@@ -100,15 +101,15 @@
                         <div class="formTitle">Book form</div>
                         <form>
                             <label for="">Book Name</label>
-                            <input class="formInput" type="text" placeholder="Book name">
+                            <input id="nameInput" class="formInput" type="text" placeholder="Book name">
                             <label for="">Author Name</label>
-                            <input class="formInput" type="text" placeholder="Author name">
+                            <input id="authorInput" class="formInput" type="text" placeholder="Author name">
                             <label for="">Book Image Url</label>
-                            <input class="formInput" type="text" placeholder="Book Image Url">
+                            <input id="urlInput" class="formInput" type="text" placeholder="Book Image Url">
                             <label for="">Description</label>
-                            <textarea class="formTextarea" cols="2" rows="2" placeholder="Description"></textarea>
+                            <textarea id="descInput" class="formTextarea" cols="2" rows="2" placeholder="Description"></textarea>
                             <label for="">Book Type</label>
-                            <input class="formInput" type="text" placeholder="Book Type">
+                            <input id="typeInput" class="formInput" type="text" placeholder="Book Type">
                             <button class="formAddBtn">Add</button>
                         </form>
                     </div>
