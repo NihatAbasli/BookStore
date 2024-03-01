@@ -2,7 +2,13 @@
 // Firebase qosulmasi>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+import {
+    getDatabase,
+    ref,
+    push,
+    set,
+    onValue
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCkKjkJqewfUsthtddoSgbLpHUUZuhf8EE",
@@ -30,6 +36,8 @@ const urlInput = document.querySelector("#urlInput");
 const descInput = document.querySelector("#descInput");
 const typeInput = document.querySelector("#typeInput");
 
+
+
 //bu funksuiya axtaris bolmesine aiddir
 function getSuggestion() {
 
@@ -41,40 +49,78 @@ function getSuggestion() {
         console.log(data.items);
 
         data.items.forEach((item, index) => {
+            const bookSelect = item.volumeInfo;
             const bookTitle = item.volumeInfo.title;
             // console.log(bookTitle);
-            let suggestionItem = `<li class="suggestEl">
+            let suggestionItem = `<li>
                 <img src="../Assets/Icon/clock.svg" alt="">
-                <p>${bookTitle}</p>
+                <p class="suggestText">${bookTitle}</p>
             </li>`
             history.innerHTML += suggestionItem;
 
-
-            document.querySelectorAll("#history").forEach((el, index) => {
-                el.addEventListener("click", () => {
-                console.log(salam);
+            const suggestText = document.querySelectorAll(".suggestText");
+            suggestText.forEach((el, count) => {
+                el.addEventListener("click", function () {
+                    nameInput.value = data.items[count].volumeInfo.title;
+                    authorInput.value = data.items[count].volumeInfo.authors;
+                    urlInput.value = data.items[count].volumeInfo.imageLinks.smallThumbnail;
+                    descInput.value = data.items[count].volumeInfo.description;
+                    typeInput.value = data.items[count].volumeInfo.categories;
+                })
             })
-            });
 
+        });
 
     })
-})
-        .catch ((err) => {
-    console.log(err);
-})
+        .catch((err) => {
+            console.log(err);
+        })
 
 
-}
-
+};
 
 adminSearchInput.addEventListener("input", function () {
     getSuggestion();
-})
+});
 
 
+const formBtn = document.querySelector("#formBtn");
 
+document.addEventListener("DOMContentLoaded", function () {
+    formBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (
+            nameInput.value == "" ||
+            authorInput.value == "" ||
+            urlInput.value == "" ||
+            descInput.value == "" ||
+            typeInput.value == ""
+        ) {
+            alert("Please enter inputs");
+            return;
+        }
 
-
+        push(ref(db, "books"), {
+            title: nameInput.value,
+            author: authorInput.value,
+            imageUrl: urlInput.value,
+            description: descInput.value,
+            type: typeInput.value,
+        }).then(() => {
+            alert("Push successfully");
+            (nameInput.value = "");
+            (authorInput.value = "");
+            (urlInput.value = "");
+            (descInput.value = "");
+            (typeInput.value = "");
+            window.location.reload();
+        })
+    })
+});
+// function writePush(collection, data) {
+//     const colRef = ref(db, collection);
+//     push(colRef, data);
+// }
 
 
 
