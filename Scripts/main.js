@@ -58,6 +58,8 @@ function getSuggestion() {
             </li>`
             history.innerHTML += suggestionItem;
 
+            document.querySelector(".historyContent").classList.add("historyActive");
+
             const suggestText = document.querySelectorAll(".suggestText");
             suggestText.forEach((el, count) => {
                 el.addEventListener("click", function () {
@@ -123,6 +125,28 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 
+// Make Books table>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+const booksRef = ref(db, 'books');
+onValue(booksRef, (snapshot) => {
+    const data = snapshot.val();
+    const entrData = Object.entries(data);
+    console.log(entrData);
+    const booksTableBody = document.querySelector("#booksTableBody")
+    const renderBooks = entrData.map((item, index) => {
+        return `<tr>
+                    <td>${index + 1}</td>
+                    <td><img class="imgMiddle" src=${item[1].imageUrl}
+                    alt="bookImg" width="30px">${item[1].title}</td>
+                    <td>Interesting Book</td>
+                    <td>${item[1].type}</td>
+                    <td>${item[1].author}</td>
+                 </tr>`
+    }).join("");
+
+    booksTableBody.innerHTML = renderBooks;
+
+});
 
 
 
