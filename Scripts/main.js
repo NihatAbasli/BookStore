@@ -1,6 +1,4 @@
-
 // Firebase qosulmasi>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import {
     getDatabase,
@@ -35,8 +33,6 @@ const authorInput = document.querySelector("#authorInput");
 const urlInput = document.querySelector("#urlInput");
 const descInput = document.querySelector("#descInput");
 const typeInput = document.querySelector("#typeInput");
-
-
 
 //bu funksuiya axtaris bolmesine aiddir
 function getSuggestion() {
@@ -77,8 +73,6 @@ function getSuggestion() {
         .catch((err) => {
             console.log(err);
         })
-
-
 };
 
 adminSearchInput.addEventListener("input", function () {
@@ -124,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //     push(colRef, data);
 // }
 
-
 // Make Books table>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 const booksRef = ref(db, 'books');
@@ -143,25 +136,35 @@ onValue(booksRef, (snapshot) => {
                     <td>${item[1].author}</td>
                  </tr>`
     }).join("");
-
     booksTableBody.innerHTML = renderBooks;
+});
 
+// About Store AdminPage
+const aboutInfoBtn = document.querySelector("#aboutInfoBtn");
+const aboutInput = document.querySelector("#aboutInput");
+const aboutText = document.querySelector("#aboutText");
+const aboutTextarea = document.querySelector("#aboutTextarea");
+
+
+aboutInfoBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    push(ref(db, "aboutStore"), {
+        title: aboutInput.value,
+        bookImgUrl: aboutText.value,
+        bookDesc: aboutTextarea.value
+    }).then(() => {
+        alert("Information push Successfully");
+        aboutInput.value = "";
+        aboutText.value = "";
+        aboutTextarea.value = "";
+        window.location.reload();
+    })
 });
 
 
 
 
-
-
-
-
-
-
-
-
-// Firebase qosulmasi ENDDDD>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
+getSuggestion();
 
 
 

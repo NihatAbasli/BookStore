@@ -728,9 +728,11 @@ ul li a.check {
     align-items: center;
     width: 100%;
   }
+
   .searchInput {
     width: 92% !important;
   }
+
   .hamburger {
     display: flex;
     justify-content: center;
@@ -797,8 +799,12 @@ ul li a.check {
     text-align: center;
   }
 
+  .about-container .left {
+    width: 40%;
+  }
+
   .about-container .right {
-    width: 90%;
+    width: 50%;
   }
 
   .about-container .right img {
@@ -1001,6 +1007,7 @@ body {
   z-index: 103;
   transition: 1s;
 }
+
 .homeModalCross {
   width: 20px;
 }
