@@ -19,7 +19,7 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// About Store Page start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 const aboutStoreDesc = document.querySelector("#aboutStoreDesc");
 const aboutImg = document.querySelector("#aboutImg");
 const aboutTitle = document.querySelector("#aboutTitle");
@@ -48,7 +48,33 @@ onValue(aboutRef, (snapshot) => {
 
 });
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// About Store Page end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+// Contact us Page start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+const contactName = document.querySelector("#contactName");
+const contactEmail = document.querySelector("#contactEmail");
+const contactAddress = document.querySelector("#contactAddress");
+const contactPhone = document.querySelector("#contactPhone");
+const contactBtn = document.querySelector("#contactBtn");
+
+contactBtn.addEventListener("click", function () {
+    const contactData = {
+        name: contactName.value,
+        email: contactEmail.value,
+        address: contactAddress.value,
+        phone: contactPhone.value
+    }
+    push(ref(db, "contactUs"), contactData)
+        .then(() => {
+            alert("Contact information successfully push")
+            contactName.value = "",
+                contactEmail.value = "",
+                contactAddress.value = "",
+                contactPhone.value = ""
+        });
+});
+
+// Contact us Page end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 

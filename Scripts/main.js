@@ -1,3 +1,4 @@
+
 // Firebase qosulmasi>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import {
@@ -20,6 +21,91 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+
+
+// Join Us Modal Homne Page
+let bgDark = document.querySelector(".bgDark");
+let joinModal = document.querySelector(".joinModal");
+let joinBtn = document.querySelector("#joinBtn");
+
+joinBtn.addEventListener("click", function () {
+    joinModal.classList.add("exit");
+    bgDark.classList.add("show");
+});
+
+bgDark.addEventListener("click", function () {
+    joinModal.classList.remove("exit");
+    bgDark.classList.remove("show");
+});
+
+// Home Page Hamburger 
+let hamburger = document.querySelector(".hamburger");
+let linkContentModal = document.querySelector(".linkContentModal");
+let homeModalCross = document.querySelector(".homeModalCross");
+
+hamburger.addEventListener("click", function () {
+    linkContentModal.classList.add("showModalHome");
+
+});
+
+homeModalCross.addEventListener("click", function () {
+    linkContentModal.classList.remove("showModalHome");
+});
+
+const joinName = document.querySelector("#joinName");
+const joinEmail = document.querySelector("#joinEmail");
+const joinModalButton = document.querySelector("#joinModalButton");
+const joinUsTbody = document.querySelector("#joinUsTbody");
+
+
+
+joinModalButton.addEventListener("click", function () {
+    push(ref(db, "joinUs"), {
+        fullName: joinName.value,
+        email: joinEmail.value
+    }).then(() => {
+        alert("Add Successfully");
+        joinName.value = "";
+        joinEmail.value = "";
+    });
+});
+
+const joinModalRef = ref(db, "joinUs");
+onValue(joinModalRef, (joinPage) => {
+    const joinModalData = joinPage.val();
+    console.log("joinModalData", joinModalData);
+    const joinNewData = Object.entries(joinModalData);
+    console.log("joinNewData", joinNewData);
+    const joinResultData = joinNewData.map((item, index) => {
+        return `<tr>
+        <td>${index + 1}</td>
+        <td>${item[1].fullName}</td>
+        <td>${item[1].email}</td>
+    </tr>`
+    }).join("");
+
+    joinUsTbody.innerHTML = joinResultData;
+
+});
+
+
+
+// const contactRef = ref(db, "contactUs");
+// onValue(contactRef, (snapshot) => {
+//     const contactPage = snapshot.val();
+//     console.log(contactPage);
+//     const contactEntries = Object.entries(contactPage);
+//     console.log(contactEntries);
+//     let contactNewData = contactEntries.map((el, count) => {
+//         return `<tr>
+//         <td>${count + 1}</td>
+//         <td>${el[1].name}</td>
+
+
+
+// Home Page Hamburger end>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
 
 // ADD BOOKS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -113,6 +199,8 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 });
+
+getSuggestion();
 // function writePush(collection, data) {
 //     const colRef = ref(db, collection);
 //     push(colRef, data);
@@ -126,7 +214,7 @@ onValue(booksRef, (snapshot) => {
     const entrData = Object.entries(data);
     console.log(entrData);
     const booksTableBody = document.querySelector("#booksTableBody")
-    const renderBooks = entrData.map((item, index) => {
+    let renderBooks = entrData.map((item, index) => {
         return `<tr>
                     <td>${index + 1}</td>
                     <td><img class="imgMiddle" src=${item[1].imageUrl}
@@ -161,10 +249,33 @@ aboutInfoBtn.addEventListener("click", function (e) {
     })
 });
 
+// Contact Us Page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+const contactBodyTable = document.querySelector("#contactBodyTable");
+const contactRef = ref(db, "contactUs");
+onValue(contactRef, (snapshot) => {
+    const contactPage = snapshot.val();
+    console.log(contactPage);
+    const contactEntries = Object.entries(contactPage);
+    console.log(contactEntries);
+    let contactNewData = contactEntries.map((el, count) => {
+        return `<tr>
+        <td>${count + 1}</td>
+        <td>${el[1].name}</td>
+        <td>${el[1].address}</td>
+        <td>${el[1].email}</td>
+        <td>${el[1].phone}</td>
+    </tr>`
+    }).join("");
+
+    contactBodyTable.innerHTML = contactNewData;
+});
+
+// Contact Us Page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Join Us Page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 
-getSuggestion();
 
 
 
@@ -192,34 +303,8 @@ getSuggestion();
 
 
 
-// Join Us Modal Homne Page
-let bgDark = document.querySelector(".bgDark");
-let joinModal = document.querySelector(".joinModal");
-let joinBtn = document.querySelector("#joinBtn");
 
-// joinBtn.addEventListener("click", function () {
-//     joinModal.classList.add("exit");
-//     bgDark.classList.add("show");
-// });
 
-// bgDark.addEventListener("click", function () {
-//     joinModal.classList.remove("exit");
-//     bgDark.classList.remove("show");
-// });
 
-// Home Page Hamburger 
-let hamburger = document.querySelector(".hamburger");
-let linkContentModal = document.querySelector(".linkContentModal");
-let homeModalCross = document.querySelector(".homeModalCross");
 
-// hamburger.addEventListener("click", function () {
-//     linkContentModal.classList.add("showModalHome");
-
-// });
-
-// homeModalCross.addEventListener("click", function () {
-//     linkContentModal.classList.remove("showModalHome");
-
-// })
-// Home Page Hamburger end>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
