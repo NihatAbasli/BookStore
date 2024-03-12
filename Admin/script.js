@@ -12,3 +12,5 @@ close.addEventListener("click", () => {
   Sidebar.classList.remove("active");
   bg1.classList.remove("active");
 });
+
+

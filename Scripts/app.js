@@ -5,6 +5,7 @@ import {
     ref,
     push,
     set,
+
     onValue
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
@@ -19,6 +20,62 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+
+
+// Join Us Modal Homne Page
+let bgDark = document.querySelector(".bgDark");
+let joinModal = document.querySelector(".joinModal");
+let joinBtn = document.querySelector("#joinBtn");
+
+joinBtn.addEventListener("click", function () {
+    joinModal.classList.add("exit");
+    bgDark.classList.add("show");
+});
+
+bgDark.addEventListener("click", function () {
+    joinModal.classList.remove("exit");
+    bgDark.classList.remove("show");
+});
+
+// Home Page Hamburger 
+let hamburger = document.querySelector(".hamburger");
+let linkContentModal = document.querySelector(".linkContentModal");
+let homeModalCross = document.querySelector(".homeModalCross");
+
+hamburger.addEventListener("click", function () {
+    linkContentModal.classList.add("showModalHome");
+
+});
+
+homeModalCross.addEventListener("click", function () {
+    linkContentModal.classList.remove("showModalHome");
+});
+
+const joinName = document.querySelector("#joinName");
+const joinEmail = document.querySelector("#joinEmail");
+const joinModalButton = document.querySelector("#joinModalButton");
+const joinUsTbody = document.querySelector("#joinUsTbody");
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    joinModalButton.addEventListener("click", function () {
+        push(ref(db, "joinUs"), {
+            fullName: joinName.value,
+            email: joinEmail.value
+        }).then(() => {
+            alert("Add Successfully");
+            joinName.value = "";
+            joinEmail.value = "";
+        });
+    });
+})
+
+
+
+
+
+
+
 // About Store Page start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 const aboutStoreDesc = document.querySelector("#aboutStoreDesc");
 const aboutImg = document.querySelector("#aboutImg");
@@ -59,7 +116,7 @@ const contactAddress = document.querySelector("#contactAddress");
 const contactPhone = document.querySelector("#contactPhone");
 const contactBtn = document.querySelector("#contactBtn");
 
-contactBtn.addEventListener("click", function () {
+contactBtn?.addEventListener("click", function () {
     const contactData = {
         name: contactName.value,
         email: contactEmail.value,
