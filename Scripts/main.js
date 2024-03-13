@@ -6,7 +6,8 @@ import {
     ref,
     push,
     set,
-    onValue
+    onValue,
+    remove
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
 const firebaseConfig = {
@@ -204,16 +205,58 @@ onValue(joinModalRef, (joinPage) => {
         <td>${item[1].fullName}</td>
         <td>${item[1].email}</td>
         <td>
-        <img id="joinCrossImg" src="../Assets/Icon/cross cycle.png" alt="" width="20px">
+        <img class="joinCrossImg"  src="../Assets/Icon/cross cycle.png" alt="" width="20px">
         </td>
     </tr>`
     }).join("");
-    
     joinUsTbody.innerHTML = joinResultData;
 
 
 });
 
+
+// silmeekkk
+
+
+const joinDel = ref(db, "joinUs");
+onValue(joinDel, (deleteCallback) => {
+    const joinDelData = deleteCallback.val();
+    console.log("delData", joinDelData);
+    const delNewData = Object.entries(joinDelData);
+    console.log("delDatayeniii", delNewData);
+    document.querySelectorAll(".joinCrossImg").addEventListener("click", function () {
+        console.log("ccc");
+    })
+});
+
+
+
+
+
+
+function deleteData(coll, id) {
+    const delRef = ref(db, coll + id);
+    remove(delRef).then(() => {
+        console.log("deletee");
+    })
+}
+// joinCrossImg.addEventListener("click", function () {
+//     deleteData("joinUs/", item[0]);
+
+// })
+
+//     const delEl = joinNewData.map((element, count1) => {
+//         console.log("elementt", element);
+//         console.log("count1", count1);
+//         console.log("count1", element[0]);
+//         const joinCrossImg = document.querySelector("#joinCrossImg");
+
+//         const delEll = joinCrossImg.addEventListener("click", function () {
+//             deleteData("joinUs/", element[0]);
+//         })
+
+//         return delEll;
+// })
 
 
 
