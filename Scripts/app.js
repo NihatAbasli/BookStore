@@ -5,7 +5,6 @@ import {
     ref,
     push,
     set,
-
     onValue
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
@@ -71,11 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-
-
-
-
-
 // About Store Page start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 const aboutStoreDesc = document.querySelector("#aboutStoreDesc");
 const aboutImg = document.querySelector("#aboutImg");
@@ -135,23 +129,28 @@ contactBtn?.addEventListener("click", function () {
 
 // Contact us Page end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-
-
-
-
 const booksAboutRef = ref(db, "books");
 
 onValue(booksAboutRef, (snapshoot) => {
     const booksData = snapshoot.val();
     const newBooksData = Object.entries(booksData);
-    console.log("newwdataaa", newBooksData);
+    // console.log("newwdataaa", newBooksData);
     const renderBooksAbout = newBooksData.map((item, index) => {
-        return `<button class="cBtn"><a href="#">${item[1].type}</a></button>`
+        return `<button id="typeBtn" class="cBtn"><a href="#">${item[1].type}</a></button>`
     }).join("");
+
 
     document.querySelector(".btnsCatalog").innerHTML = renderBooksAbout;
 });
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// const typeBtn = document.querySelector("#typeBtn");
+// typeBtn.addEventListener("click",function(){
+//     console.log("kkkk");
+// })
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 const catalogRef = ref(db, "books");
 
@@ -160,7 +159,7 @@ onValue(catalogRef, (catalogFunc) => {
     const newCatalog = Object.entries(catalogData);
     // console.log("newCatalog ",catalogData);
     const catalogRender = newCatalog.map((el, count1) => {
-        console.log("ellll ", el[1].type);
+        // console.log("ellll ", el[1].type);
         return `<li><a href="#">${el[1].type}</a></li>`;
     }).join("");
 
@@ -174,7 +173,7 @@ const silederRef = ref(db, "books");
 onValue(silederRef, (silederBook) => {
     const silederData = silederBook.val();
     const silederNewData = Object.entries(silederData);
-    console.log("silederdata ", silederNewData);
+    // console.log("silederdata ", silederNewData);
 
     const renderSileder = silederNewData.map((element) => {
         return `<div class="swiper-slide">
@@ -188,4 +187,8 @@ onValue(silederRef, (silederBook) => {
     }).join("");
 
     document.querySelector("#booksSileder").innerHTML = renderSileder;
-})
+});
+
+
+
+
