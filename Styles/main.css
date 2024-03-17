@@ -338,8 +338,8 @@ ul li a.check {
   font-size: 18px;
   padding: 8px 20px;
   border: none;
-  box-shadow: 2px 2px 5px 0.2px rgb(92, 90, 90);
-  margin-bottom: 150px;
+  box-shadow: 2px 2px 5px 0.2px rgb(153, 146, 146);
+  margin-bottom: 50px;
   border-radius: 7px;
 }
 
@@ -351,7 +351,7 @@ ul li a.check {
   font-weight: 700;
   border: none;
   font-size: 18px;
-  box-shadow: 2px 2px 5px 0.2px rgb(92, 90, 90);
+  box-shadow: 2px 2px 5px 0.2px rgb(151, 144, 144);
   margin-bottom: 10px;
   border-radius: 7px;
 }
@@ -628,7 +628,9 @@ ul li a.check {
 .catalog-container {
   padding: 140px 0;
 }
-
+.section1{
+  margin-top: 50px;
+}
 .book-list {
   width: 70%;
   display: flex;
@@ -875,10 +877,10 @@ ul li a.check {
   .pageRight {
     width: 100%;
   }
-
+/* 
   .backButton {
-    margin: 180px 0 60px;
-  }
+    margin-top:500px;
+  } */
 
   .bookPage {
     padding: 0px 0px 10px !important;

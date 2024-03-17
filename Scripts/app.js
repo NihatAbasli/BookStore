@@ -135,3 +135,57 @@ contactBtn?.addEventListener("click", function () {
 
 // Contact us Page end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+
+
+
+
+
+const booksAboutRef = ref(db, "books");
+
+onValue(booksAboutRef, (snapshoot) => {
+    const booksData = snapshoot.val();
+    const newBooksData = Object.entries(booksData);
+    console.log("newwdataaa", newBooksData);
+    const renderBooksAbout = newBooksData.map((item, index) => {
+        return `<button class="cBtn"><a href="#">${item[1].type}</a></button>`
+    }).join("");
+
+    document.querySelector(".btnsCatalog").innerHTML = renderBooksAbout;
+});
+
+const catalogRef = ref(db, "books");
+
+onValue(catalogRef, (catalogFunc) => {
+    const catalogData = catalogFunc.val();
+    const newCatalog = Object.entries(catalogData);
+    // console.log("newCatalog ",catalogData);
+    const catalogRender = newCatalog.map((el, count1) => {
+        console.log("ellll ", el[1].type);
+        return `<li><a href="#">${el[1].type}</a></li>`;
+    }).join("");
+
+    document.querySelector(".bookTypeRender").innerHTML = catalogRender;
+
+});
+
+
+const silederRef = ref(db, "books");
+
+onValue(silederRef, (silederBook) => {
+    const silederData = silederBook.val();
+    const silederNewData = Object.entries(silederData);
+    console.log("silederdata ", silederNewData);
+
+    const renderSileder = silederNewData.map((element) => {
+        return `<div class="swiper-slide">
+                <div class="book-about" > 
+                <img src="${element[1].imageUrl ? element[1].imageUrl : "https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_640.jpg"}" alt="book" height="220px">
+                <p class="name">${(element[1].author ? element[1].author : "Anonim").substring(0, 15)}</p>
+                <p class="author">${(element[1].title ? element[1].title : "Anonim").substring(0, 15)}</p>
+                <button><a href="./Book-Page.html">Read more</a></button>
+                </div>
+                    </div>`
+    }).join("");
+
+    document.querySelector("#booksSileder").innerHTML = renderSileder;
+})
