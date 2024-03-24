@@ -156,13 +156,13 @@ const catalogRef = ref(db, "books");
 onValue(catalogRef, (catalogFunc) => {
     const catalogData = catalogFunc.val();
     const newCatalog = Object.entries(catalogData);
-    // console.log("newCatalog ",catalogData);
+    console.log("newCatalog ", catalogData);
     const catalogRender = newCatalog.map((el, count1) => {
         // console.log("ellll ", el[1].type);
 
-        return `<li><a href="#">${el[1].type}</a></li>`;
+        // return `<li><a href="#">${el[1].type}</a></li>`;
 
-        return `<button value=${el[1].type} class="listBtn">${el[1].type}</button>`;
+        return `<button data-typee="${el[1].type}" class="listBtn">${el[1].type}</button>`;
 
     }).join("");
 
@@ -170,16 +170,31 @@ onValue(catalogRef, (catalogFunc) => {
 
 
     const listBtn = document.querySelectorAll(".listBtn");
-    console.log("listbtnn ", listBtn);
-    
-    listBtn.forEach((item,index)=>{
-        item.addEventListener("click",function(){
-            console.log(index);
+    listBtn.forEach((el5, count5) => {
+        const listType = el5.dataset.typee;
+        el5.addEventListener("click", function () {
+            const filterType = newCatalog.filter((item) => {
+                return item[1].type == listType;
+            });
+            // console.log(filterType[0][1].type);
+            const itemType = filterType[0][1];
+            const renderType = `<div class="swiper-slide">
+            <div class="book-about" >                 
+                <img src="${itemType.imageUrl}" alt="book">
+                <p class="name">${itemType.title}</p>
+                <p class="author">${itemType.author}</p>
+                <button><a href="#">Read more</a></button>                
+            </div>
+        </div>`
+
+            document.querySelector("#booksSileder").innerHTML = renderType;
+
         })
     })
 
-});
 
+
+});
 
 
 
@@ -244,7 +259,7 @@ function searchPageRender() {
 }
 
 
-searchBtn.addEventListener("click", function () {
+searchBtn?.addEventListener("click", function () {
     searchPageRender();
 });
 
