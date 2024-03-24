@@ -153,23 +153,37 @@ onValue(booksAboutRef, (snapshoot) => {
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 const catalogRef = ref(db, "books");
-
 onValue(catalogRef, (catalogFunc) => {
     const catalogData = catalogFunc.val();
     const newCatalog = Object.entries(catalogData);
     // console.log("newCatalog ",catalogData);
     const catalogRender = newCatalog.map((el, count1) => {
         // console.log("ellll ", el[1].type);
-        return `<li><a href="#">${el[1].type}</a></li>`;
+        return `<button value=${el[1].type} class="listBtn">${el[1].type}</button>`;
     }).join("");
 
     document.querySelector(".bookTypeRender").innerHTML = catalogRender;
 
+
+    const listBtn = document.querySelectorAll(".listBtn");
+    console.log("listbtnn ", listBtn);
+    
+    listBtn.forEach((item,index)=>{
+        item.addEventListener("click",function(){
+            console.log(index);
+        })
+    })
+
 });
 
 
-const silederRef = ref(db, "books");
 
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+const silederRef = ref(db, "books");
 onValue(silederRef, (silederBook) => {
     const silederData = silederBook.val();
     const silederNewData = Object.entries(silederData);
@@ -181,7 +195,7 @@ onValue(silederRef, (silederBook) => {
                 <img src="${element[1].imageUrl ? element[1].imageUrl : "https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_640.jpg"}" alt="book" height="220px">
                 <p class="name">${(element[1].author ? element[1].author : "Anonim").substring(0, 15)}</p>
                 <p class="author">${(element[1].title ? element[1].title : "Anonim").substring(0, 15)}</p>
-                <button><a href="./Book-Page.html">Read more</a></button>
+                <button><a href="#">Read more</a></button>
                 </div>
                     </div>`
     }).join("");

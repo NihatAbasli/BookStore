@@ -182,3 +182,29 @@ a {
 button:hover {
   opacity: 0.9;
 }
+
+
+/* scroll */
+
+::-webkit-scrollbar {
+  width: 5px; /* width of the scrollbar */
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the track */
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--clr-orange); /* color of the scrollbar handle */
+  border-radius: 5px; /* rounded corners */
+  width: 150px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-orange); /* color on hover */
+}
