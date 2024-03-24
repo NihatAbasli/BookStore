@@ -57,7 +57,7 @@ const joinUsTbody = document.querySelector("#joinUsTbody");
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    joinModalButton.addEventListener("click", function () {
+    joinModalButton?.addEventListener("click", function () {
         push(ref(db, "joinUs"), {
             fullName: joinName.value,
             email: joinEmail.value
@@ -82,7 +82,7 @@ const aboutRef = ref(db, "aboutStore");
 onValue(aboutRef, (snapshot) => {
     const aboutData = snapshot.val();
     const aboutEntries = Object.entries(aboutData);
-    console.log(aboutEntries);
+    // console.log(aboutEntries);
     const aboutNewData = aboutEntries.map((item, index) => {
         return ` <div class="about-container">
         <div class="left">
@@ -159,7 +159,11 @@ onValue(catalogRef, (catalogFunc) => {
     // console.log("newCatalog ",catalogData);
     const catalogRender = newCatalog.map((el, count1) => {
         // console.log("ellll ", el[1].type);
+
+        return `<li><a href="#">${el[1].type}</a></li>`;
+
         return `<button value=${el[1].type} class="listBtn">${el[1].type}</button>`;
+
     }).join("");
 
     document.querySelector(".bookTypeRender").innerHTML = catalogRender;
@@ -203,6 +207,46 @@ onValue(silederRef, (silederBook) => {
     document.querySelector("#booksSileder").innerHTML = renderSileder;
 });
 
+
+//search page inputunu tutmaq
+
+const searchInput = document.querySelector(".searchInput");
+const searchBtn = document.querySelector("#searchBtn");
+const bookAboutContent = document.querySelector(".bookAboutContent");
+
+
+
+function searchPageRender() {
+    const promise = fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput.value}`);
+    promise.then((res) => {
+        return res.json();
+    }).then((data) => {
+        // console.log("data ", data);
+        // console.log("data items ", data.items);
+        // console.log("data ", data.items[0]);
+        const dataEnter = data.items[0].volumeInfo;
+        const renderSearch = ` <div class="searchbookImg">
+                <img src="${dataEnter.imageLinks.smallThumbnail}" width="190px">
+            </div>
+            <div class="searchBookContent">
+                <div class="searchBookName">${dataEnter.title}</div>
+                <div class="searchBookAuthor">${dataEnter.authors}</div>
+                <div class="searchBookText">
+                ${dataEnter.description}
+                </div>
+            </div>`
+        bookAboutContent.innerHTML = renderSearch;
+
+    }).catch((err) => {
+        console.log("then Error");
+    });
+    searchInput.value = "";
+}
+
+
+searchBtn.addEventListener("click", function () {
+    searchPageRender();
+});
 
 
 

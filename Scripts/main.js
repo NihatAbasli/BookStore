@@ -132,7 +132,7 @@ const booksRef = ref(db, 'books');
 onValue(booksRef, (snapshot) => {
     const data = snapshot.val();
     const entrData = Object.entries(data);
-    console.log(entrData);
+    // console.log(entrData);
     const booksTableBody = document.querySelector("#booksTableBody")
     let renderBooks = entrData.map((item, index) => {
         return `<tr>
@@ -174,9 +174,9 @@ const contactBodyTable = document.querySelector("#contactBodyTable");
 const contactRef = ref(db, "contactUs");
 onValue(contactRef, (snapshot) => {
     const contactPage = snapshot.val();
-    console.log(contactPage);
+    // console.log(contactPage);
     const contactEntries = Object.entries(contactPage);
-    console.log(contactEntries);
+    // console.log(contactEntries);
     let contactNewData = contactEntries.map((el, count) => {
         return `<tr>
         <td>${count + 1}</td>
@@ -196,9 +196,9 @@ onValue(contactRef, (snapshot) => {
 const joinModalRef = ref(db, "joinUs");
 onValue(joinModalRef, (joinPage) => {
     const joinModalData = joinPage.val();
-    console.log("joinModalData", joinModalData);
+    // console.log("joinModalData", joinModalData);
     const joinNewData = Object.entries(joinModalData);
-    console.log("joinNewData", joinNewData);
+    // console.log("joinNewData", joinNewData);
     const joinResultData = joinNewData.map((item, index) => {
         return `<tr>
         <td>${index + 1}</td>
@@ -225,7 +225,7 @@ onValue(joinModalRef, (joinPage) => {
 
 
 
-// booksAboutTabledenkileri oxumaq
+
 
 
 
