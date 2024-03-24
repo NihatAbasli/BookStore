@@ -58,7 +58,7 @@ const joinUsTbody = document.querySelector("#joinUsTbody");
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    joinModalButton.addEventListener("click", function () {
+    joinModalButton?.addEventListener("click", function () {
         push(ref(db, "joinUs"), {
             fullName: joinName.value,
             email: joinEmail.value
@@ -69,11 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 })
-
-
-
-
-
 
 
 // About Store Page start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -88,7 +83,7 @@ const aboutRef = ref(db, "aboutStore");
 onValue(aboutRef, (snapshot) => {
     const aboutData = snapshot.val();
     const aboutEntries = Object.entries(aboutData);
-    console.log(aboutEntries);
+    // console.log(aboutEntries);
     const aboutNewData = aboutEntries.map((item, index) => {
         return ` <div class="about-container">
         <div class="left">
@@ -135,17 +130,12 @@ contactBtn?.addEventListener("click", function () {
 
 // Contact us Page end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-
-
-
-
 const booksAboutRef = ref(db, "books");
 
 onValue(booksAboutRef, (snapshoot) => {
     const booksData = snapshoot.val();
     const newBooksData = Object.entries(booksData);
-    console.log("newwdataaa", newBooksData);
+    // console.log("newwdataaa", newBooksData);
     const renderBooksAbout = newBooksData.map((item, index) => {
         return `<button class="cBtn"><a href="#">${item[1].type}</a></button>`
     }).join("");
@@ -160,7 +150,7 @@ onValue(catalogRef, (catalogFunc) => {
     const newCatalog = Object.entries(catalogData);
     // console.log("newCatalog ",catalogData);
     const catalogRender = newCatalog.map((el, count1) => {
-        console.log("ellll ", el[1].type);
+        // console.log("ellll ", el[1].type);
         return `<li><a href="#">${el[1].type}</a></li>`;
     }).join("");
 
@@ -174,7 +164,7 @@ const silederRef = ref(db, "books");
 onValue(silederRef, (silederBook) => {
     const silederData = silederBook.val();
     const silederNewData = Object.entries(silederData);
-    console.log("silederdata ", silederNewData);
+    // console.log("silederdata ", silederNewData);
 
     const renderSileder = silederNewData.map((element) => {
         return `<div class="swiper-slide">
@@ -188,4 +178,44 @@ onValue(silederRef, (silederBook) => {
     }).join("");
 
     document.querySelector("#booksSileder").innerHTML = renderSileder;
-})
+});
+
+//search page inputunu tutmaq
+
+const searchInput = document.querySelector(".searchInput");
+const searchBtn = document.querySelector("#searchBtn");
+const bookAboutContent = document.querySelector(".bookAboutContent");
+
+
+
+function searchPageRender() {
+    const promise = fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput.value}`);
+    promise.then((res) => {
+        return res.json();
+    }).then((data) => {
+        // console.log("data ", data);
+        // console.log("data items ", data.items);
+        // console.log("data ", data.items[0]);
+        const dataEnter = data.items[0].volumeInfo;
+        const renderSearch = ` <div class="searchbookImg">
+                <img src="${dataEnter.imageLinks.smallThumbnail}" width="190px">
+            </div>
+            <div class="searchBookContent">
+                <div class="searchBookName">${dataEnter.title}</div>
+                <div class="searchBookAuthor">${dataEnter.authors}</div>
+                <div class="searchBookText">
+                ${dataEnter.description}
+                </div>
+            </div>`
+        bookAboutContent.innerHTML = renderSearch;
+
+    }).catch((err) => {
+        console.log("then Error");
+    });
+    searchInput.value = "";
+}
+
+
+searchBtn.addEventListener("click", function () {
+    searchPageRender();
+});
