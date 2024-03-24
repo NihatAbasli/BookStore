@@ -650,20 +650,22 @@ ul li a.check {
   width: 50%;
   overflow-x: auto;
   white-space: nowrap;
-  height: 60px;
+  height: 35px;
 }
 
-.book-type ul {
+.book-type div {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
-.book-type ul a {
+.book-type div button {
   font-family: var(--font-montserrat);
   font-size: 13px;
   font-weight: 400;
   line-height: 26px;
   color: #241400;
+  border: none;
+  background-color: transparent;
 }
 
 .book-about {
@@ -1036,3 +1038,7 @@ body {
   color: white;
   font-weight: 500;
 }
+
+
+/* /////////////////////////////// */
+
