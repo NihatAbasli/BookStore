@@ -304,3 +304,86 @@ searchBtn?.addEventListener("click", function () {
     searchPageRender();
 });
 
+
+
+//Comment Part>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+const baseUrl = "https://blog-api-t6u0.onrender.com";
+
+const getPost = async () => {
+    try {
+        const response = await fetch(baseUrl + "/posts", {
+            method: "GET"
+        });
+        const data = await response.json();
+        // console.log("data ", data);
+        return data;
+    } catch (err) {
+        console.log("Error", err);
+    }
+}
+
+// getPost();
+
+const postMethod = async (form) => {
+    try {
+        const response = await fetch(baseUrl + "/posts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(form)
+        });
+
+        const data = await response.json();
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+// postMethod({ title: "yorummm", body: "hjfdgdjgv" });
+
+const inputCommet = document.querySelector(".inputCommet");
+const sendBtn = document.querySelector("#sendBtn");
+
+
+async function renderPosts() {
+    try {
+
+        sendBtn.addEventListener("click", function () {
+            const commentValue = inputCommet.value;
+            postMethod({ title: commentValue });
+            // console.log(commentValue);
+            inputCommet.value = "";
+        });
+
+        const dataRender = await getPost();
+
+        const filterDataRender = dataRender.filter((comment) => {
+            return comment.id > 100;
+        });
+
+        const commentData = filterDataRender.reverse().map((item, index) => {
+            return `<div class="textTop">
+            <div class="userName">Anonim</div>
+            <div class="dateUser">18:32 today</div>
+        </div>
+        <div class="textArea">
+            ${item.title}
+        </div>`
+        }).join("");
+
+
+        document.querySelector(".commentText").innerHTML = commentData;
+
+
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+renderPosts();
+
