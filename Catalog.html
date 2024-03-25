@@ -65,7 +65,7 @@
 
     <main>
 
-        <section class="custom-container">
+        <section id="catalogStart" class="custom-container">
             <div class="catalog-container">
                 <div class="book-list">
                     <span>All books</span>
@@ -87,7 +87,7 @@
                                     <img src=".//Assets/Image/book1.png" alt="book">
                                     <p class="name">Order in Chaos</p>
                                     <p class="author">Konstantin Koptelov</p>
-                                    <button><a href="#">Read more</a></button>                
+                                    <button class="readMoreBtn">Read more</button>                
                                 </div>
                             </div> -->
                         </div>
@@ -118,10 +118,10 @@
 
 
         <!-- book page -->
-        <section class="custom-container" style="display: none;">
+        <section id="bookPageStart" class="custom-container" style="display: none;">
             <section>
                 <div style="padding: 180px 0px;" class="bookPage">
-                    <div class="pageLeft">
+                    <!-- <div class="pageLeft">
                         <button id="backBtn" onclick="history.back()" class="backButton"> &#60;Back</button>
                         <button class="year">2017</button>
                         <div class="bookName">Order in Chaos</div>
@@ -143,12 +143,12 @@
 
                     <div class="pageRight">
                         <img src="./Assets/Image/book1.png" width="100%" alt="">
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
 
-            <section class="custom-container">
+            <section>
                 <div class="commentContainer">
                     <div class="inputContent">
                         <input class="inputCommet" type="text" placeholder="your anonim comment...">
