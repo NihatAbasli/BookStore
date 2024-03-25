@@ -320,7 +320,7 @@ ul li a.check {
 .bookPage {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .pageLeft {
@@ -406,6 +406,10 @@ ul li a.check {
   width: 100%;
   outline: 1px solid var(--clr-orange);
   border: none;
+}
+.readMoreBtn{
+  color: white;
+  font-weight: 600;
 }
 
 .contactButton {
@@ -514,7 +518,7 @@ ul li a.check {
 }
 
 .commentContainer {
-  margin-top: 122px;
+  margin-top: 50px;
 }
 
 /* Contact us Page section end.................................................*/
@@ -714,6 +718,7 @@ ul li a.check {
   line-height: 24px;
   color: #ffff;
 }
+
 
 /* Swiper... */
 .swiper-slide {

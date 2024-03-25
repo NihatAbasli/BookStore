@@ -183,17 +183,12 @@ onValue(catalogRef, (catalogFunc) => {
                 <img src="${itemType.imageUrl}" alt="book">
                 <p class="name">${itemType.title}</p>
                 <p class="author">${itemType.author}</p>
-                <button><a href="#">Read more</a></button>                
+                <button class="readMoreBtn">Read more</button>                
             </div>
         </div>`
-
             document.querySelector("#booksSileder").innerHTML = renderType;
-
-        })
-    })
-
-
-
+        });
+    });
 });
 
 
@@ -214,13 +209,61 @@ onValue(silederRef, (silederBook) => {
                 <img src="${element[1].imageUrl ? element[1].imageUrl : "https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_640.jpg"}" alt="book" height="220px">
                 <p class="name">${(element[1].author ? element[1].author : "Anonim").substring(0, 15)}</p>
                 <p class="author">${(element[1].title ? element[1].title : "Anonim").substring(0, 15)}</p>
-                <button><a href="#">Read more</a></button>
+                <button data-type-name="${element[1].type}" class="readMoreBtn">Read more</button>
                 </div>
                     </div>`
     }).join("");
 
     document.querySelector("#booksSileder").innerHTML = renderSileder;
+
+    //BOOK PAGE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    const bookPageStart = document.querySelector("#bookPageStart");
+    const readMoreBtn = document.querySelectorAll(".readMoreBtn");
+    const catalogStart = document.querySelector("#catalogStart");
+
+    // console.log(readMoreBtn.dataset.typeName);
+    readMoreBtn.forEach((item, index) => {
+        const btnType = item.dataset.typeName;
+        item.addEventListener("click", function () {
+            console.log(btnType);
+            const bookFilter = silederNewData.filter((books) => {
+                // console.log("books ", books[1].type);
+                return books[1].type == btnType;
+            });
+            catalogStart.style.display = "none";
+            bookPageStart.style.display = "block";
+
+            console.log("bookFilter", bookFilter);
+            // console.log("item",item);
+
+            const itemsBook = bookFilter[0][1];
+
+            const renderFilterBooks = `<div class="pageLeft">
+            <button id="backBtn" onclick="history.back()" class="backButton"> &#60;Back</button>
+            <button class="year">2017</button>
+            <div class="bookName">${itemsBook.title}</div>
+            <div class="time">2 days ago added</div>
+            <div class="author">${itemsBook.author}</div>
+            <div class="title">
+            ${itemsBook.description}
+            </div>
+        </div>
+
+        <div class="pageRight">
+            <img src="${itemsBook.imageUrl}" alt="book" width="90%">
+        </div>`;
+
+            document.querySelector(".bookPage").innerHTML = renderFilterBooks;
+
+        })
+
+    })
+
+
 });
+
+
+
 
 
 //search page inputunu tutmaq
@@ -228,7 +271,6 @@ onValue(silederRef, (silederBook) => {
 const searchInput = document.querySelector(".searchInput");
 const searchBtn = document.querySelector("#searchBtn");
 const bookAboutContent = document.querySelector(".bookAboutContent");
-
 
 
 function searchPageRender() {
@@ -258,10 +300,7 @@ function searchPageRender() {
     searchInput.value = "";
 }
 
-
 searchBtn?.addEventListener("click", function () {
     searchPageRender();
 });
-
-
 
